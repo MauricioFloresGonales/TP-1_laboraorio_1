@@ -1,4 +1,4 @@
 
 int ingresarNumero(int);
-void mostrarCaluculos(int,int);
-void mostrarRespuestas(int,int,float,int);
+int mostrarCaluculos(int,int,int,int);
+int mostrarRespuestas(int,int,float,int,int);

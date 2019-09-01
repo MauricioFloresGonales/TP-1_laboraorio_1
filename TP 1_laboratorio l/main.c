@@ -9,8 +9,9 @@ int main()
 {
     int datoA;
     int datoB;
-    int flagX=0;
-    int flagY=0;
+    int funcinamiento=0;
+    int estadoA=0;
+    int estadoB=0;
     int suma;
     int resta;
     float division;
@@ -22,7 +23,7 @@ int main()
     char opcion;
     do
     {
-        if(flagX == 0)
+        if(estadoA == 0)
         {
             printf("1. Ingresar 1er operando (A=x)\n");
 
@@ -30,7 +31,7 @@ int main()
             printf("1. Ingresar 1er operando (A=%d)\n",datoA);
             }
 
-        if(flagY == 0)
+        if(estadoB == 0)
         {
             printf("2. Ingresar 2do operando (B=y)\n");
 
@@ -49,16 +50,18 @@ int main()
         {
             case '1':
                 datoA=ingresarNumero(datoA);
-                flagX=1;
+                estadoA=1;
 
                 break;
             case '2':
                 datoB=ingresarNumero(datoB);
-                flagY=1;
+                estadoB=1;
 
                 break;
             case '3':
-                mostrarCaluculos(datoA,datoB);
+
+                funcinamiento = mostrarCaluculos(datoA,datoB,estadoA,estadoB);
+                printf("el estado es: %d\n",funcinamiento);
 
                 suma = calculoSumar(datoA,datoB);
 
@@ -70,7 +73,7 @@ int main()
 
                 break;
             case '4':
-                mostrarRespuestas(suma,resta,division,multiplicacion);
+                funcinamiento = mostrarRespuestas(suma,resta,division,multiplicacion,funcinamiento);
                 break;
             case '5':
                 printf("ADIOS!!\n");
