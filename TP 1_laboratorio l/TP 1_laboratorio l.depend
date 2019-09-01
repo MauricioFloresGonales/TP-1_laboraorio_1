@@ -3,7 +3,22 @@
 	<stdio.h>
 	<stdlib.h>
 
-1566937048 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\main.c
+1567367799 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\main.c
 	<stdio.h>
 	<stdlib.h>
+	"menu.h"
+	"calculos.h"
+
+1567365018 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\calculos.c
+	<stdio.h>
+	"calculos.h"
+
+1567365018 c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\calculos.h
+
+1567367799 c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\menu.h
+
+1567367841 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\menu.c
+	<stdio.h>
+	"menu.h"
+	"calculos.h"
 

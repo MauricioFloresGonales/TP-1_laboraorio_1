@@ -1,13 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "menu.h"
+#include "calculos.h"
 
-int ingresarNumero(int);
-void calcularOperaciones(int,int);
-void mostrarCaluculos(int,int);
-int calculoSumar(int, int);
-int calculoRestar(int, int);
-float calculoDivisidir(int,int);
-int calculoMultiplicar(int,int);
+
 
 int main()
 {
@@ -15,6 +11,12 @@ int main()
     int datoB;
     int flagX=0;
     int flagY=0;
+    int suma;
+    int resta;
+    float division;
+    int multiplicacion;
+    //int factoreoA;
+    //int factoreoB;
 
 
     char opcion;
@@ -57,10 +59,18 @@ int main()
                 break;
             case '3':
                 mostrarCaluculos(datoA,datoB);
-                calcularOperaciones(datoA,datoB);
+
+                suma = calculoSumar(datoA,datoB);
+
+                resta = calculoRestar(datoA,datoB);
+
+                division = calculoDivisidir(datoA,datoB);
+
+                multiplicacion = calculoMultiplicar(datoA,datoB);
+
                 break;
             case '4':
-                printf("Estoy mostrando!!!\n");
+                mostrarRespuestas(suma,resta,division,multiplicacion);
                 break;
             case '5':
                 printf("ADIOS!!\n");
@@ -77,58 +87,7 @@ int main()
     return 0;
 }
 
-int ingresarNumero(int numeroIngresado)
-{
-    int numero;
-    printf("ingrese un numero: ");
-    scanf("%d",&numero);
-    return numero;
-}
 
-void calcularOperaciones(int operandoA,int operandoB)
-{
-    int suma;
-    int resta;
-    int division;
-    int multiplicacion;
 
-    suma = calculoSumar(operandoA,operandoB);
-    resta = calculoRestar(operandoA,operandoB);
-    division = calculoDivisidir(operandoA,operandoB);
-    multiplicacion = calculoMultiplicar(operandoA,operandoB);
 
-}
-
-void mostrarCaluculos(int operandoA,int operandoB)
-{
-    printf("a) Calcular la suma (%d+%d)\nb) Calcular la resta (%d-%d)\nc) Calcular la division (%d/%d)\nd) Calcular la multiplicacion (%d*%d)\ne) Calcular el factorial (%d!)\n",operandoA,operandoB,operandoA,operandoB,operandoA,operandoB,operandoA,operandoB,operandoA);
-}
-
-int calculoSumar(int operandoA,int operandoB)
-{
-    int respuesta;
-    respuesta=operandoA+operandoB;
-    return respuesta;
-}
-
-int calculoRestar(int operandoA,int operandoB)
-{
-    int respuesta;
-    respuesta=operandoA-operandoB;
-    return respuesta;
-}
-
-float calculoDivisidir(int operandoA,int operandoB)
-{
-    float respuesta;
-    respuesta=operandoA/(float)operandoB;
-    return respuesta;
-}
-
-int calculoMultiplicar(int operandoA,int operandoB)
-{
-    int respuesta;
-    respuesta=operandoA*operandoB;
-    return respuesta;
-}
 
