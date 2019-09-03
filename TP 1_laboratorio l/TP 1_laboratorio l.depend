@@ -1,7 +1,9 @@
 # depslib dependency file v1.0
-1566917393 source:c:\users\alumno\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\main.c
+1567519004 source:c:\users\alumno\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\main.c
 	<stdio.h>
 	<stdlib.h>
+	"menu.h"
+	"calculos.h"
 
 1567376305 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\main.c
 	<stdio.h>
@@ -21,4 +23,17 @@
 	<stdio.h>
 	"menu.h"
 	"calculos.h"
+
+1567517842 source:c:\users\alumno\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\calculos.c
+	<stdio.h>
+	"calculos.h"
+
+1567517842 c:\users\alumno\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\calculos.h
+
+1567519203 source:c:\users\alumno\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\menu.c
+	<stdio.h>
+	"menu.h"
+	"calculos.h"
+
+1567517842 c:\users\alumno\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\menu.h
 

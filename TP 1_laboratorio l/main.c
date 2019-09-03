@@ -4,7 +4,6 @@
 #include "calculos.h"
 
 
-
 int main()
 {
     int datoA;
@@ -61,7 +60,6 @@ int main()
             case '3':
 
                 funcinamiento = mostrarCaluculos(datoA,datoB,estadoA,estadoB);
-                printf("el estado es: %d\n",funcinamiento);
 
                 suma = calculoSumar(datoA,datoB);
 

@@ -14,11 +14,17 @@ int ingresarNumero(int numeroIngresado)
 
 int mostrarCaluculos(int operandoA,int operandoB,int estadoA,int estadoB)
 {
-    int estado=0;
+    int estado;
 
     if(estadoA==0 || estadoB==0)
     {
-        printf("no se pudo\n");
+        if(estadoA==0)
+        {
+            printf("Falta ingresar el dato A\n");
+        }else{
+            printf("Falta ingresar el dato B\n");
+        }
+
         estado=0;
 
     }else{
@@ -33,11 +39,15 @@ int mostrarRespuestas(int suma,int resta,float multiplicacion,int division,int f
 
     if(funcionamiento == 0)
     {
-        printf("no se pudo");
+        printf("no se pudo\n");
         estado=0;
 
     }else{
-        printf("a) El resultado de A+B es: %d\n b) El resultado de A-B es: %d\nc) El resultado de A/B es: %f\nd) El resultado de A*B es: %d\n",suma,resta,multiplicacion,division);
+        printf("a) El resultado de A+B es: %d\n",suma);
+        printf("b) El resultado de A-B es: %d\n",resta);
+        printf("c) El resultado de A/B es: %f\n",multiplicacion);
+        printf("d) El resultado de A*B es: %d\n",division);
+
         estado=1;
     }
 
