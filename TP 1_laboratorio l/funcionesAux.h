@@ -1,0 +1,1 @@
+int validarDatos(int,int);

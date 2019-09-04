@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "menu.h"
 #include "calculos.h"
+#include "funcionesAux.h"
 
 int ingresarNumero(int numeroIngresado)
 {
@@ -12,28 +13,23 @@ int ingresarNumero(int numeroIngresado)
     return numero;
 }
 
+
 int mostrarCaluculos(int operandoA,int operandoB,int estadoA,int estadoB)
 {
     int estado;
 
-    if(estadoA==0 || estadoB==0)
-    {
-        if(estadoA==0)
-        {
-            printf("Falta ingresar el dato A\n");
-        }else{
-            printf("Falta ingresar el dato B\n");
-        }
+                printf("a) Calcular la suma (%d+%d)\n",operandoA,operandoB);
+                printf("b) Calcular la resta (%d-%d)\n",operandoA,operandoB);
+                printf("c) Calcular la division (%d/%d)\n",operandoA,operandoB);
+                printf("d) Calcular la multiplicacion (%d*%d)\n",operandoA,operandoB);
+                printf("e) Calcular el factorial (%d!) y de (%d!)\n",operandoA,operandoB);
 
-        estado=0;
-
-    }else{
-        printf("a) Calcular la suma (%d+%d)\nb) Calcular la resta (%d-%d)\nc) Calcular la division (%d/%d)\nd) Calcular la multiplicacion (%d*%d)\ne) Calcular el factorial (%d!)\n",operandoA,operandoB,operandoA,operandoB,operandoA,operandoB,operandoA,operandoB,operandoA);
-        estado=1;
-    }
+                estado=1;
     return estado;
 }
-int mostrarRespuestas(int suma,int resta,float multiplicacion,int division,int funcionamiento)
+
+
+int mostrarRespuestas(int operandoA,int operanndoB,int funcionamiento)
 {
     int estado;
 
@@ -43,10 +39,12 @@ int mostrarRespuestas(int suma,int resta,float multiplicacion,int division,int f
         estado=0;
 
     }else{
-        printf("a) El resultado de A+B es: %d\n",suma);
-        printf("b) El resultado de A-B es: %d\n",resta);
-        printf("c) El resultado de A/B es: %f\n",multiplicacion);
-        printf("d) El resultado de A*B es: %d\n",division);
+        calculoSumarMostrar("a) El resultado de",operandoA,operanndoB);
+        calculoRestarMostrar("b) El resultado de",operandoA,operanndoB);
+        calculoDividirMostrar("c) El resultado de",operandoA,operanndoB);
+        calculoMultiplicarMostrar("d) El resultado de",operandoA,operanndoB);
+        calculoFactorialMostrar("e) El factorial de",operandoA);
+        calculoFactorialMostrar(" y El factorial de",operanndoB);
 
         estado=1;
     }

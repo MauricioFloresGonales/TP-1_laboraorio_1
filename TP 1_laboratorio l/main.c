@@ -15,8 +15,8 @@ int main()
     int resta;
     float division;
     int multiplicacion;
-    //int factoreoA;
-    //int factoreoB;
+    int factoreoA;
+    int factoreoB;
 
 
     char opcion;
@@ -28,7 +28,7 @@ int main()
 
         }else{
             printf("1. Ingresar 1er operando (A=%d)\n",datoA);
-            }
+        }
 
         if(estadoB == 0)
         {
@@ -36,7 +36,8 @@ int main()
 
         }else{
             printf("2. Ingresar 2do operando (B=%d)\n",datoB);
-            }
+        }
+
         printf("3. Calcular todas las operaciones\n");
         printf("4. Informar resultados\n");
         printf("5. SALIR\n");
@@ -48,37 +49,53 @@ int main()
         switch(opcion)
         {
             case '1':
+
                 datoA=ingresarNumero(datoA);
                 estadoA=1;
 
                 break;
             case '2':
+
                 datoB=ingresarNumero(datoB);
                 estadoB=1;
 
                 break;
             case '3':
 
-                funcinamiento = mostrarCaluculos(datoA,datoB,estadoA,estadoB);
+                if(validarDatos(estadoA,estadoB)== 1)
+                {
+                    funcinamiento = mostrarCaluculos(datoA,datoB,estadoA,estadoB);
 
-                suma = calculoSumar(datoA,datoB);
+                    suma = calculoSumar(datoA,datoB);
 
-                resta = calculoRestar(datoA,datoB);
+                    resta = calculoRestar(datoA,datoB);
 
-                division = calculoDivisidir(datoA,datoB);
+                    division = calculoDividir(datoA,datoB);
 
-                multiplicacion = calculoMultiplicar(datoA,datoB);
+                    multiplicacion = calculoMultiplicar(datoA,datoB);
+
+                    factoreoA = calcularFactorial(datoA);
+
+                    factoreoB = calcularFactorial(datoB);
+                }
+
+
 
                 break;
             case '4':
-                funcinamiento = mostrarRespuestas(suma,resta,division,multiplicacion,funcinamiento);
+                if(validarDatos(estadoA,estadoB)== 1)
+                {
+                    funcinamiento = mostrarRespuestas(datoA,datoB,funcinamiento);
+                }
+
+
                 break;
             case '5':
                 printf("ADIOS!!\n");
                 break;
             default:
-                printf("Opcion incorrecta!!!\n");
 
+                printf("Opcion incorrecta!!!\n");
         }
     system("pause");
     system("cls");

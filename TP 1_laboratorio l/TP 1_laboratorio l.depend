@@ -5,24 +5,25 @@
 	"menu.h"
 	"calculos.h"
 
-1567376305 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\main.c
+1567628445 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\main.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
 	"calculos.h"
 
-1567365018 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\calculos.c
+1567626770 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\calculos.c
 	<stdio.h>
 	"calculos.h"
 
-1567365018 c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\calculos.h
+1567622625 c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\calculos.h
 
-1567376057 c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\menu.h
+1567623444 c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\menu.h
 
-1567376122 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\menu.c
+1567628384 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\menu.c
 	<stdio.h>
 	"menu.h"
 	"calculos.h"
+	"funcionesAux.h"
 
 1567517842 source:c:\users\alumno\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\calculos.c
 	<stdio.h>
@@ -36,4 +37,10 @@
 	"calculos.h"
 
 1567517842 c:\users\alumno\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\menu.h
+
+1567628911 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\funcionesaux.c
+	<stdio.h>
+	"funcionesAux.h"
+
+1567628086 c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\funcionesaux.h
 
