@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "calculos.h"
 
+//              -SUMA-
+
 int calculoSumar(int operandoA,int operandoB)
 {
     int respuesta;
@@ -8,15 +10,14 @@ int calculoSumar(int operandoA,int operandoB)
     return respuesta;
 }
 
-void calculoSumarMostrar(char mensaje[],int operandoA,int operandoB)
+void mostrarSuma(char mensaje[],int operandoA, int operandoB, int respuesta)
 {
-    int respuesta;
-
-    respuesta = calculoSumar(operandoA,operandoB);
-
-    printf("%s %d+%d es:%d\n",mensaje,operandoA,operandoB,respuesta);
-
+    printf("%s %d+%d es: %d\n",mensaje,operandoA,operandoB,respuesta);
 }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+//              -RESTA-
 
 int calculoRestar(int operandoA,int operandoB)
 {
@@ -25,15 +26,14 @@ int calculoRestar(int operandoA,int operandoB)
     return respuesta;
 }
 
-void calculoRestarMostrar(char mensaje[],int operandoA,int operandoB)
+void mostrarResta(char mensaje[],int operandoA, int operandoB, int respuesta)
 {
-    int respuesta;
-
-    respuesta = calculoRestar(operandoA,operandoB);
-
     printf("%s %d-%d es: %d\n",mensaje,operandoA,operandoB,respuesta);
-
 }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+//         -DIVISION-
 
 float calculoDividir(int operandoA,int operandoB)
 {
@@ -44,20 +44,19 @@ float calculoDividir(int operandoA,int operandoB)
     return respuesta;
 }
 
-void calculoDividirMostrar(char mensaje[],int operandoA,int operandoB)
+void mostrarDivision(char mensajeCorrecto[],char mensajeError[],int operandoA,int operandoB ,float respuesta)
 {
-    float respuesta;
-
-    if(operandoB == 0)
+    if(operandoB < 0)
     {
-        printf("No se puede dividir entre cero\n");
+        printf("%s",mensajeError);
     }else{
-
-        respuesta = calculoDividir(operandoA,operandoB);
-
-        printf("%s %d/%d es: %f\n",mensaje,operandoA,operandoB,respuesta);
+        printf("%s %d/%d es: %f\n",mensajeCorrecto,operandoA,operandoB,respuesta);
     }
 }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+//          -MULTIPLICACION-
 
 int calculoMultiplicar(int operandoA,int operandoB)
 {
@@ -66,15 +65,14 @@ int calculoMultiplicar(int operandoA,int operandoB)
     return respuesta;
 }
 
-void calculoMultiplicarMostrar(char mensaje[],int operandoA,int operandoB)
+void mostrarMultiplicacion(char mensaje[],int operandoA,int operandoB,int respuesta)
 {
-    int respuesta;
-
-    respuesta = calculoMultiplicar(operandoA,operandoB);
-
     printf("%s %d*%d es: %d\n",mensaje,operandoA,operandoB,respuesta);
-
 }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+//                -FACTORIAR-
 
 int calcularFactorial(int operando)
 {
@@ -89,12 +87,16 @@ int calcularFactorial(int operando)
     return resultado;
 }
 
-void calculoFactorialMostrar(char mensaje[],int operando)
+void mostrarFactorial(char mensaje[],char errorMenorCero[],char errorAlPasarse[],int operando,int respuesta)
 {
-    unsigned int respuesta;
-
-    respuesta = calcularFactorial(operando);
-
-    printf("%s %d es: %d\n",mensaje,operando,respuesta);
-
+    if(operando < 0)
+    {
+      printf("%s",errorMenorCero);
+    }else if(operando>13)
+        {
+          printf("%s",errorAlPasarse);
+        }else{
+            printf("%s %d es: %d\n",mensaje,operando,respuesta);
+        }
 }
+

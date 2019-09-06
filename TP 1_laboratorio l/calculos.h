@@ -1,23 +1,23 @@
 
 int calculoSumar(int, int);
 
-void calculoSumarMostrar(char [],int,int);
+void mostrarSuma(char[],int,int,int);
 
 int calculoRestar(int, int);
 
-void calculoRestarMostrar(char [],int,int);
+void mostrarResta(char[],int,int,int);
 
 float calculoDividir(int,int);
 
-void calculoDividirMostrar(char [],int,int);
+void mostrarDivision(char [],char [],int,int,float);
 
 int calculoMultiplicar(int,int);
 
-void calculoMultiplicarMostrar(char [],int,int);
+void mostrarMultiplicacion(char[],int,int,int);
 
 int calcularFactorial(int);
 
-void calculoFactorialMostrar(char [],int);
+void mostrarFactorial(char[],char [],char[],int,int);
 
 
 

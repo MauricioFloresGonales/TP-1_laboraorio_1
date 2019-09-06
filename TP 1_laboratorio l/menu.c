@@ -29,22 +29,22 @@ int mostrarCaluculos(int operandoA,int operandoB,int estadoA,int estadoB)
 }
 
 
-int mostrarRespuestas(int operandoA,int operanndoB,int funcionamiento)
+int mostrarRespuestas(int operandoA,int operanndoB ,int suma ,int resta ,float division ,int multiplicacion ,int factorialA ,int factorialB ,int funcionamiento)
 {
     int estado;
 
     if(funcionamiento == 0)
     {
-        printf("no se pudo\n");
+        printf("FALTA CALCULAR LAS CUENTAS\n");
         estado=0;
 
     }else{
-        calculoSumarMostrar("a) El resultado de",operandoA,operanndoB);
-        calculoRestarMostrar("b) El resultado de",operandoA,operanndoB);
-        calculoDividirMostrar("c) El resultado de",operandoA,operanndoB);
-        calculoMultiplicarMostrar("d) El resultado de",operandoA,operanndoB);
-        calculoFactorialMostrar("e) El factorial de",operandoA);
-        calculoFactorialMostrar(" y El factorial de",operanndoB);
+        mostrarSuma("El resultado de ",operandoA,operanndoB,suma);
+        mostrarResta("El resultado de ",operandoA,operanndoB,resta);
+        mostrarDivision("El resultado de ","No es posible dividir por cero",operandoA,operanndoB,division);
+        mostrarMultiplicacion("El resultado de ",operandoA,operanndoB,multiplicacion);
+        mostrarFactorial("El resultado de ","no se puede factoriar un numero menor a cero","No estoy preparada para factoriar un numero mayor a 12",operandoA,factorialA);
+        mostrarFactorial("El resultado de ","no se puede factoriar un numero menor a cero","No estoy preparada para factoriar un numero mayor a 12",operanndoB,factorialB);
 
         estado=1;
     }

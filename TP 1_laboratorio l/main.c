@@ -2,22 +2,28 @@
 #include <stdlib.h>
 #include "menu.h"
 #include "calculos.h"
-
+#include "funcionesAux.h"
 
 int main()
 {
+//  DATOS:
     int datoA;
     int datoB;
-    int funcinamiento=0;
+//  BANDERAS:
+    int funcionamiento=0;
     int estadoA=0;
     int estadoB=0;
+//  CUENTAS:
     int suma;
     int resta;
     float division;
     int multiplicacion;
     int factoreoA;
     int factoreoB;
-
+//VALIDADORES:
+    int validadorDeIngreso;
+    int validadorA;
+    int validadorB;
 
     char opcion;
     do
@@ -49,22 +55,35 @@ int main()
         switch(opcion)
         {
             case '1':
-
-                datoA=ingresarNumero(datoA);
-                estadoA=1;
+                estadoA = validarPaso(datoA,estadoA,validadorA,funcionamiento);
 
                 break;
             case '2':
 
-                datoB=ingresarNumero(datoB);
-                estadoB=1;
+                if(estadoA == 0)
+                {
+                    datoB=ingresarNumero(datoB);
+                    validadorB= datoB;
+                    estadoB=1;
+                }else{
+
+                    datoB = ingresarNumero(datoB);
+                    estadoB=1;
+                    if(datoB != validadorB)
+                    {
+                        validadorB=datoB;
+                        funcionamiento=0;
+                    }
+                }
 
                 break;
             case '3':
 
-                if(validarDatos(estadoA,estadoB)== 1)
+                validadorDeIngreso = validarDatos(estadoA,estadoB);
+
+                if(validadorDeIngreso == 1)
                 {
-                    funcinamiento = mostrarCaluculos(datoA,datoB,estadoA,estadoB);
+                    funcionamiento = mostrarCaluculos(datoA,datoB,estadoA,estadoB);
 
                     suma = calculoSumar(datoA,datoB);
 
@@ -79,15 +98,15 @@ int main()
                     factoreoB = calcularFactorial(datoB);
                 }
 
-
-
                 break;
             case '4':
-                if(validarDatos(estadoA,estadoB)== 1)
-                {
-                    funcinamiento = mostrarRespuestas(datoA,datoB,funcinamiento);
-                }
 
+                validadorDeIngreso = validarDatos(estadoA,estadoB);
+
+                if(validadorDeIngreso == 1)
+                {
+                    funcionamiento = mostrarRespuestas(datoA,datoB ,suma ,resta ,division ,multiplicacion ,factoreoA ,factoreoB ,funcionamiento);
+                }
 
                 break;
             case '5':
