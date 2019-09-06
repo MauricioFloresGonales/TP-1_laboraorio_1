@@ -26,7 +26,7 @@ int validarDatos(int estadoA,int estadoB)
     return estado;
 }
 
-int validarPaso(int dato,int estado,int axiliar,int funcionamiento)
+int validarPaso(int dato,int estado,int axiliar,int funcionamiento)// esto se podria hacer con punteros???
 {
     if(estado == 0)
     {
