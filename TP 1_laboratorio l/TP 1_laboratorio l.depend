@@ -5,7 +5,7 @@
 	"menu.h"
 	"calculos.h"
 
-1567730251 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\main.c
+1567731106 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\main.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
@@ -16,9 +16,9 @@
 	<stdio.h>
 	"calculos.h"
 
-1567727131 c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\calculos.h
+1567732502 c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\calculos.h
 
-1567726874 c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\menu.h
+1567732502 c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\menu.h
 
 1567728044 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\menu.c
 	<stdio.h>
@@ -39,10 +39,9 @@
 
 1567517842 c:\users\alumno\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\menu.h
 
-1567730554 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\funcionesaux.c
+1567731086 source:c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\funcionesaux.c
 	<stdio.h>
-	"menu.h"
 	"funcionesAux.h"
 
-1567730251 c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\funcionesaux.h
+1567732502 c:\users\pipoca\desktop\tp-1_laboraorio_1\tp 1_laboratorio l\funcionesaux.h
 

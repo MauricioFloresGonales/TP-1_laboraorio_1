@@ -51,16 +51,29 @@ int main()
         fflush(stdin);
         scanf("%c", &opcion);
 
-
         switch(opcion)
         {
             case '1':
-                estadoA = validarPaso(datoA,estadoA,validadorA,funcionamiento);
+                if(estadoA == 0)
+                {
+                    datoA=ingresarNumero(datoA);
+                    validadorA= datoA;
+                    estadoA=1;
+                }else{
+
+                    datoA = ingresarNumero(datoA);
+                    estadoA=1;
+                    if(datoA != validadorA)
+                    {
+                        validadorA = datoB;
+                        funcionamiento=0;
+                    }
+                }
 
                 break;
             case '2':
 
-                if(estadoA == 0)
+                if(estadoB == 0)
                 {
                     datoB=ingresarNumero(datoB);
                     validadorB= datoB;
