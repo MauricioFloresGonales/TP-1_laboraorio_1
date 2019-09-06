@@ -59,6 +59,7 @@ int main()
                     datoA=ingresarNumero(datoA);
                     validadorA= datoA;
                     estadoA=1;
+
                 }else{
 
                     datoA = ingresarNumero(datoA);
@@ -78,6 +79,7 @@ int main()
                     datoB=ingresarNumero(datoB);
                     validadorB= datoB;
                     estadoB=1;
+
                 }else{
 
                     datoB = ingresarNumero(datoB);
@@ -96,19 +98,26 @@ int main()
 
                 if(validadorDeIngreso == 1)
                 {
-                    funcionamiento = mostrarCaluculos(datoA,datoB,estadoA,estadoB);
+                    funcionamiento = mostrarCaluculos(datoA,datoB);
 
+//                           SUMA
                     suma = calculoSumar(datoA,datoB);
-
+//                           RESTA
                     resta = calculoRestar(datoA,datoB);
-
+//                          DIVISION
                     division = calculoDividir(datoA,datoB);
-
+//                        MULTIPLICACION
                     multiplicacion = calculoMultiplicar(datoA,datoB);
+//                        FACTORIZACION
+                    if(datoA >= 0)
+                    {
+                        factoreoA = calcularFactorial(datoA);
+                    }
 
-                    factoreoA = calcularFactorial(datoA);
-
-                    factoreoB = calcularFactorial(datoB);
+                    if(datoB >= 0)
+                    {
+                        factoreoB = calcularFactorial(datoB);
+                    }
                 }
 
                 break;
@@ -123,11 +132,13 @@ int main()
 
                 break;
             case '5':
+
                 printf("ADIOS!!\n");
+
                 break;
             default:
 
-                printf("Opcion incorrecta!!!\n");
+                printf("OPCION INCORRECTA!!!\n");
         }
     system("pause");
     system("cls");

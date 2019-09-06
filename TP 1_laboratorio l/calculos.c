@@ -96,7 +96,7 @@ void mostrarFactorial(char mensaje[],char errorMenorCero[],char errorAlPasarse[]
         {
           printf("%s",errorAlPasarse);
         }else{
-            printf("%s %d es: %d\n",mensaje,operando,respuesta);
+            printf("%s %d! es: %d\n",mensaje,operando,respuesta);
         }
 }
 

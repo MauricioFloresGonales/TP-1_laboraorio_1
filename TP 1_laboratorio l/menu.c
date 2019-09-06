@@ -14,7 +14,7 @@ int ingresarNumero(int numeroIngresado)
 }
 
 
-int mostrarCaluculos(int operandoA,int operandoB,int estadoA,int estadoB)
+int mostrarCaluculos(int operandoA,int operandoB)
 {
     int estado;
 
@@ -35,7 +35,7 @@ int mostrarRespuestas(int operandoA,int operanndoB ,int suma ,int resta ,float d
 
     if(funcionamiento == 0)
     {
-        printf("FALTA CALCULAR LAS CUENTAS\n");
+        printf("FALTA CALCULAR LAS CUENTAS!!\n");
         estado=0;
 
     }else{
@@ -43,8 +43,8 @@ int mostrarRespuestas(int operandoA,int operanndoB ,int suma ,int resta ,float d
         mostrarResta("El resultado de ",operandoA,operanndoB,resta);
         mostrarDivision("El resultado de ","No es posible dividir por cero",operandoA,operanndoB,division);
         mostrarMultiplicacion("El resultado de ",operandoA,operanndoB,multiplicacion);
-        mostrarFactorial("El resultado de ","no se puede factoriar un numero menor a cero","No estoy preparada para factoriar un numero mayor a 12",operandoA,factorialA);
-        mostrarFactorial("El resultado de ","no se puede factoriar un numero menor a cero","No estoy preparada para factoriar un numero mayor a 12",operanndoB,factorialB);
+        mostrarFactorial("El resultado de ","NO SE PUEDE FACTORIAR UN NUMERO MENOR A CERO\n","NO ESTOY PREPARADA PARA FACTORIAR UN NUMERO MAYOR A 12",operandoA,factorialA);
+        mostrarFactorial("El resultado de ","NO SE PUEDE FACTORIAR UN NUMERO MENOR A CERO\n","NO ESTOY PREPARADA PARA FACTORIAR UN NUMERO MAYOR A 12",operanndoB,factorialB);
 
         estado=1;
     }
